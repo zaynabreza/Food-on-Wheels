@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="325.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SubmitOrderController">
+    <center>
+        <AnchorPane prefHeight="525.0" prefWidth="325.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="525.0" fitWidth="325.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@signup.jpg" />
+                    </image>
+                </ImageView>
+                <Label layoutX="25.0" layoutY="55.0" text="Assign Rider and Charges" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="23.0" />
+                    </font>
+                </Label>
+                <Label layoutX="34.0" layoutY="440.0" prefHeight="45.0" prefWidth="142.0" text="Confirm" textFill="#f06137">
+                    <font>
+                        <Font name="System Bold" size="30.0" />
+                    </font>
+                </Label>
+                <Button fx:id="submit" layoutX="225.0" layoutY="433.0" mnemonicParsing="false" onAction="#submitOrder" prefHeight="61.0" prefWidth="64.0" style="-fx-background-radius: 100; -fx-background-color: #f06137;" styleClass="red" stylesheets="@style.css" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="25.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Group.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Label layoutX="24.0" layoutY="295.0" prefHeight="53.0" prefWidth="162.0" text="Total Cost: &#10;(inc. 7% tax)" textFill="#fcfafa">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="total" alignment="CENTER" layoutX="195.0" layoutY="313.0" prefHeight="19.0" prefWidth="125.0" textFill="#fffdfd">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="del" layoutX="24.0" layoutY="354.0" prefHeight="27.0" prefWidth="161.0" promptText="Delivery Charges" style="-fx-background-color: transparent; -fx-border-color: #d3d3d3; -fx-border-width: 0px 0px 2px 0px;" />
+                <TextField fx:id="rider" layoutX="24.0" layoutY="393.0" prefHeight="25.0" prefWidth="270.0" promptText="Assigned Rider Email" style="-fx-background-color: transparent; -fx-border-color: #d3d3d3; -fx-border-width: 0px 0px 2px 0px;" />
+                <Label alignment="CENTER" layoutX="23.0" layoutY="102.0" prefHeight="24.0" prefWidth="187.0" style="-fx-background-color: #f06137;" text="Items" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" layoutX="219.0" layoutY="102.0" prefHeight="24.0" prefWidth="56.0" style="-fx-background-color: #f06137;" text="Qty" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="i1" alignment="CENTER" layoutX="23.0" layoutY="126.0" prefHeight="24.0" prefWidth="187.0" style="-fx-background-color: transparent;">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="i2" alignment="CENTER" layoutX="23.0" layoutY="150.0" prefHeight="24.0" prefWidth="187.0" style="-fx-background-color: transparent;">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="i3" alignment="CENTER" layoutX="23.0" layoutY="174.0" prefHeight="24.0" prefWidth="187.0" style="-fx-background-color: transparent;">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="i4" alignment="CENTER" layoutX="23.0" layoutY="200.0" prefHeight="24.0" prefWidth="187.0" style="-fx-background-color: transparent;">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="i5" alignment="CENTER" layoutX="23.0" layoutY="222.0" prefHeight="24.0" prefWidth="187.0" style="-fx-background-color: transparent;">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="q1" alignment="CENTER" layoutX="219.0" layoutY="126.0" prefHeight="24.0" prefWidth="56.0" style="-fx-background-color: transparent;">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Button fx:id="apply" layoutX="209.0" layoutY="355.0" mnemonicParsing="false" onAction="#addDelivery" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: #f06137;" styleClass="red" stylesheets="@style.css" text="Apply Charges" textFill="#f8f7f7">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Label fx:id="q2" alignment="CENTER" layoutX="219.0" layoutY="150.0" prefHeight="24.0" prefWidth="56.0" style="-fx-background-color: transparent;">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="q3" alignment="CENTER" layoutX="219.0" layoutY="174.0" prefHeight="24.0" prefWidth="56.0" style="-fx-background-color: transparent;">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="q4" alignment="CENTER" layoutX="219.0" layoutY="198.0" prefHeight="24.0" prefWidth="56.0" style="-fx-background-color: transparent;">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="q5" alignment="CENTER" layoutX="219.0" layoutY="222.0" prefHeight="24.0" prefWidth="56.0" style="-fx-background-color: transparent;">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label fx:id="msg" alignment="CENTER" layoutX="78.0" layoutY="425.0" prefHeight="19.0" prefWidth="155.0" textFill="#f06137">
+                    <font>
+                        <Font name="System Bold" size="9.0" />
+                    </font>
+                </Label>
+            <Label layoutX="23.0" layoutY="278.0" prefHeight="17.0" prefWidth="56.0" text="Address:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="add" layoutX="90.0" layoutY="278.0" prefHeight="17.0" prefWidth="223.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+               <tooltip>
+                  <Tooltip fx:id="tadd" text="Empty Tooltip" />
+               </tooltip>
+            </Label>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

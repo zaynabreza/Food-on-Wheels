@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="325.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RMenuController">
+    <center>
+        <AnchorPane prefHeight="525.0" prefWidth="325.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="525.0" fitWidth="325.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@signup.jpg" />
+                    </image>
+                </ImageView>
+                <HBox layoutX="10.0" layoutY="8.0" prefHeight="33.0" prefWidth="308.0">
+                    <children>
+                        <Button fx:id="status" mnemonicParsing="false" onAction="#changeStatus" prefHeight="32.0" prefWidth="76.0" stylesheets="@style.css" text="Status" textFill="WHITE" wrapText="true">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                            <styleClass>
+                                <String fx:value="sign" />
+                                <String fx:value="border" />
+                            </styleClass>
+                            <tooltip>
+                                <Tooltip text="Change Order Status" />
+                            </tooltip>
+                        </Button>
+                        <Button fx:id="menu" mnemonicParsing="false" prefHeight="32.0" prefWidth="76.0" style="-fx-border-width: 0px 0px 3px 0px; -fx-border-color: white;" stylesheets="@style.css" text="Menu" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                            <tooltip>
+                                <Tooltip autoHide="true" height="10.0" text="Edit Menu" width="10.0">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Tooltip>
+                            </tooltip>
+                            <styleClass>
+                                <String fx:value="border" />
+                                <String fx:value="sign" />
+                            </styleClass>
+                        </Button>
+
+                        <Button fx:id="editbutton" mnemonicParsing="false" onAction="#changeInfo" prefHeight="32.0" prefWidth="76.0" stylesheets="@style.css" text="Edit" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                            <styleClass>
+                                <String fx:value="sign" />
+                                <String fx:value="border" />
+                            </styleClass>
+                            <tooltip>
+                                <Tooltip text="Edit Your Info" />
+                            </tooltip>
+                        </Button>
+                        <Button fx:id="logout" mnemonicParsing="false" onAction="#LogOut" prefHeight="32.0" prefWidth="77.0" stylesheets="@style.css" text="Logout" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                            <styleClass>
+                                <String fx:value="sign" />
+                                <String fx:value="border" />
+                            </styleClass>
+                        </Button>
+                    </children>
+                </HBox>
+                <Label layoutX="50.0" layoutY="75.0" prefHeight="34.0" prefWidth="222.0" text="Edit / Add or Delete" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="23.0" />
+                    </font>
+                </Label>
+                <Label fx:id="msg" alignment="CENTER" layoutX="48.0" layoutY="457.0" prefHeight="22.0" prefWidth="226.0" textFill="#f06137">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+                <Button fx:id="add" layoutX="34.0" layoutY="370.0" mnemonicParsing="false" onAction="#addtoMenu" prefHeight="25.0" prefWidth="124.0" style="-fx-background-color: #f06137;" styleClass="red" stylesheets="@style.css" text="Add to Menu" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="delete" layoutX="233.0" layoutY="210.0" mnemonicParsing="false" onAction="#removeItem" prefHeight="23.0" prefWidth="79.0" style="-fx-background-color: #f06137;" styleClass="red" stylesheets="@style.css" text="Delete" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="10.0" />
+                    </font>
+                </Button>
+                <Label fx:id="p1" layoutX="34.0" layoutY="356.0" opacity="0.0" prefHeight="19.0" prefWidth="77.0" text="Phone:" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+            <TextField fx:id="name" layoutX="34.0" layoutY="208.0" prefHeight="27.0" prefWidth="179.0" promptText="Item/Deal Name" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #d3d3d3;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Label alignment="CENTER" layoutX="50.0" layoutY="103.0" prefHeight="34.0" prefWidth="222.0" text="from Menu" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <TextField fx:id="price" layoutX="34.0" layoutY="259.0" prefHeight="27.0" prefWidth="179.0" promptText="Price" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #d3d3d3;">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <RadioButton fx:id="avail" layoutX="38.0" layoutY="309.0" mnemonicParsing="false" text="Available" />
+            <Button fx:id="edit" layoutX="171.0" layoutY="370.0" mnemonicParsing="false" onAction="#editMenu" prefHeight="25.0" prefWidth="124.0" style="-fx-background-color: #f06137;" styleClass="red" stylesheets="@style.css" text="Edit Item" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="deal" layoutX="96.0" layoutY="418.0" mnemonicParsing="false" onAction="#addtoDeals" prefHeight="25.0" prefWidth="124.0" style="-fx-background-color: #f06137;" styleClass="red" stylesheets="@style.css" text="Add to Deals" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

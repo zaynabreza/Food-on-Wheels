@@ -1,0 +1,18 @@
+.c:hover{
+    -fx-scale-x: 1.1;
+        -fx-scale-y: 1.1;
+        -fx-scale-z: 1.1;
+}
+.red:hover{
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-scale-z: 1.1;
+
+}
+.border{
+-fx-background-color: transparent;
+}
+.sign:hover{
+    -fx-border-color: #ffffff;
+    -fx-border-width: 0px 0px 3px 0px;
+}
